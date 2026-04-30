@@ -1,66 +1,63 @@
-# Tjk-Bot
+# 🏇 Tjk-Bot
 
-Python bot that scrapes horse racing results from TJK (Türkiye Jokey Kulübü).
+![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
+![Selenium](https://img.shields.io/badge/Selenium-Automation-green.svg)
+![Pandas](https://img.shields.io/badge/Pandas-Data_Analysis-yellow.svg)
+![License](https://img.shields.io/badge/License-MIT-purple.svg)
 
-## Features
+An automated Python scraper designed to extract comprehensive horse racing results, schedules, and detailed statistics directly from TJK (Türkiye Jokey Kulübü) website.
 
-- ✅ Scrape daily race results
-- ✅ Extract horse rankings and times
-- ✅ Get jockey and trainer information
-- ✅ Export data to CSV/Excel
-- ✅ Automated data collection
+## 🌟 Features
 
-## Requirements
+*   **Daily Race Results:** Scrapes detailed results for all races on a given day.
+*   **Horse & Jockey Stats:** Extracts performance metrics, odds, and placement data.
+*   **Export Options:** Saves the scraped data cleanly into structured formats (`.csv`, `.json`).
+*   **Undetected:** Utilizes `undetected_chromedriver` to ensure stable and uninterrupted scraping sessions.
 
-- Python 3.8+
-- Required packages in `requirements.txt`
+## 🛠️ Prerequisites
 
-## Installation
+*   Python 3.8 or higher
+*   Google Chrome installed on your machine
+
+## ⚙️ Installation
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/canekremdura/Tjk-Bot.git
+    cd Tjk-Bot
+    ```
+
+2.  **Set up a virtual environment (Recommended):**
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # On Windows, use: venv\Scripts\activate
+    ```
+
+3.  **Install the required packages:**
+    ```bash
+    pip install beautifulsoup4 pandas selenium undetected-chromedriver
+    ```
+
+## 🚀 Usage
+
+Execute the scraper via the command line:
 
 ```bash
-# Clone the repository
-git clone https://github.com/canekremdura/Tjk-Bot.git
-cd Tjk-Bot
-
-# Install dependencies
-pip install -r requirements.txt
+python scraper.py
 ```
 
-## Usage
+*Upon execution, the bot will fetch the latest racing data. Check the script file to modify parameters like specific dates or tracks.*
 
-```bash
-# Run the bot
-python tjk_bot.py
+## 📁 Output Data
 
-# Or with custom date
-python tjk_bot.py --date "2024-01-15"
-```
+By default, the scraped data will be parsed and saved into the current working directory as:
+*   `tjk_data_[DATE].csv`
+*   `tjk_data_[DATE].json`
 
-## Output
+## ⚠️ Disclaimer
 
-The bot exports data in the following format:
+This tool is built for educational and analytical purposes. Please respect the website's Terms of Service and `robots.txt`. Do not hammer the servers with excessive requests.
 
-| Race No | Horse Name | Jockey | Rank | Time |
-|---------|------------|--------|------|------|
-| 1 | Horse A | Jockey X | 1 | 1:23.45 |
+## 📄 License
 
-## Disclaimer
-
-This bot is for educational purposes only. Please respect the website's terms of service and robots.txt file.
-
-## License
-
-MIT License
-
-## Author
-
-**Can Ekrem Dura**
-
-[GitHub Profile](https://github.com/canekremdura)
-
----
-
-*Check out my other projects:*
-- [Mackolik-Bot](https://github.com/canekremdura/Mackolik-Bot) - Football match data scraper
-- [csv-to-json-cli](https://github.com/canekremdura/csv-to-json-cli) - CSV to JSON converter
-- [wp-custom-variation-swatches](https://github.com/canekremdura/wp-custom-variation-swatches) - WooCommerce swatches
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
